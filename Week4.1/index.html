@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Manipulation and Events</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #myEmptyDiv {
+        margin: 50px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myEmptyDiv"></div>
+    <script>
+      const myEmptyDiv = document.querySelector("#myEmptyDiv");
+
+      const newHeadline = document.createElement("h1");
+      newHeadline.textContent = "Llamas are awesome!";
+      myEmptyDiv.appendChild(newHeadline);
+
+      newHeadline.addEventListener("click", function() {
+        document.body.style.backgroundColor = "lightblue";
+      });
+    </script>
+  </body>
+</html>
