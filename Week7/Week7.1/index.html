@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Llamas vs Alpacas</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <h1>Llamas vs Alpacas</h1>
+    <p>Click on the links below to learn more about llamas and alpacas:</p>
+    <ul>
+      <li><a v-bind:href="llamaUrl">Llamas</a></li>
+      <li><a v-bind:href="alpacaUrl">Alpacas</a></li>
+    </ul>
+    <h2>Do you know the difference?</h2>
+    <p v-bind:class="{ 'highlight': showDifference }">Llamas are bigger and have longer ears than alpacas. Alpacas are more social and have a softer, denser fleece.</p>
+    <button v-on:click="showDifference = !showDifference">Show/Hide Difference</button>
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        llamaUrl: 'https://en.wikipedia.org/wiki/Llama',
+        alpacaUrl: 'https://en.wikipedia.org/wiki/Alpaca',
+        showDifference: false
+      }
+    })
+  </script>
+</body>
+</html>
