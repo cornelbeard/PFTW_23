@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Llama vs Alpaca</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="app" v-cloak>
+		<h1>Llama vs Alpaca</h1>
+		<p>Learn about the differences between llamas and alpacas!</p>
+		<ul>
+			<li v-for="(llama, index) in llamas" :class="{ 'odd-row': index % 2 !== 0, 'llama-name': llama.toLowerCase().includes('llama') }">{{ llama }}</li>
+		</ul>
+		<p>For more information, visit <a :href="llamaLink" target="_blank">{{ llamaLink }}</a> or <a :href="alpacaLink" target="_blank">{{ alpacaLink }}</a>.</p>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
