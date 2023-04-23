@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sneaker Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <h1>Sneaker Collection</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Brand</th>
+          <th>Name</th>
+          <th>Year</th>
+          <th>Condition</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(sneaker, index) in sneakers" :class="{ 'odd-row': index % 2 !== 0, 'nike-row': sneaker.brand.toLowerCase().includes('nike') }">
+          <td>{{ sneaker.brand }}</td>
+          <td>{{ sneaker.name }}</td>
+          <td>{{ sneaker.year }}</td>
+          <td>{{ sneaker.condition }}</td>
+          <td>{{ sneaker.description }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
