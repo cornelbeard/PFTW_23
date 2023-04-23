@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Llama Facts</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Llama Facts</h1>
+        <ul>
+            <li v-for="fact in facts" :key="fact">{{ fact }}</li>
+        </ul>
+        <p v-if="showFact">{{ facts[0] }}</p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
