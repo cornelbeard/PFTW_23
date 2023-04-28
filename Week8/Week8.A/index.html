@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sneaker Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>{{ collectionTitle }}</h1>
+    <div v-for="(item, index) in collection" :key="index" class="item">
+      <img :src="item.image" alt="Sneaker Image">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.description }}</p>
+      <p>{{ item.price }}</p>
+      <button @click="deleteItem(index)">Delete</button>
+    </div>
+    <form @submit.prevent="addItem">
+      <label for="name">Name:</label>
+      <input type="text" id="name" v-model="newItem.name" required>
+      <label for="description">Description:</label>
+      <input type="text" id="description" v-model="newItem.description" required>
+      <label for="price">Price:</label>
+      <input type="number" id="price" v-model="newItem.price" required>
+      <label for="image">Image:</label>
+      <input type="text" id="image" v-model="newItem.image" required>
+      <button type="submit">Add Item</button>
+    </form>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
