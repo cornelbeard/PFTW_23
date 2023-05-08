@@ -1,0 +1,45 @@
+/* add your CSS styles here */
+nav {
+  background-color: #000000;
+  color: #fff;
+  padding: 1em;
+  margin-bottom: 50px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1em;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.2s;
+  display: inline-block;
+  text-align: center;
+  padding: 0.5em 1em;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  color: rgb(34, 255, 0);
+  background-color: #d6cfcf;
+}
+
+canvas {
+  display: block;
+  margin: 10px auto;
+}
+
+body {
+  background-color: #000000;
+}
